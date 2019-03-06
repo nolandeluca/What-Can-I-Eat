@@ -12,4 +12,5 @@ if (mm < 10) {
 }
 
 today = yyyy + '-' + mm + '-' + dd;
-document.write(today);
+
+console.log(today);
