@@ -25,3 +25,6 @@ https://api.fitbit.com/1/user/-/foods/log/date/{date}.json
     "protein": 57,
     "sodium": 155,
     "water": 4258.56005859375
+    
+    
+    then "caloriesOut" - "calories" = "remaining calories"
