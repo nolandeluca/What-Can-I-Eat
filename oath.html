@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 
-<head>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Tracker Page</title>
 
-	<title>Tracker Page</title>
+    <!--Bootsrap 4 CDN-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
 
+    <!--Fontawesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
 
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-	<!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-
-<body>
-	<div class="container">
-		<div class="d-flex justify-content-center h-100">
-			<div class="card">
-				<div class="card-header">
-					<h3>Please select device</h3>
-
-				</div>
-				<div class="card-body">
-					<form>
-
-						<div id="Fitbit button" class="input-group form-group">
-							<div class="input-group-prepend">
-								<a class="btn btn-success"
-									href="https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=22DKGW&redirect_uri=https%3A%2F%2Fnolandeluca.github.io%2FWhat-Can-I-Eat%2Fcallback&scope=activity%20nutrition&expires_in=604800"
-									role="button">Fitbit</a>
-							</div>
-							<div id="Samsung button" class="input-group form-group">
-								<div class="input-group-prepend">
-									<button type="button" class="btn btn-primary">Samsung</button> </div>
-							</div>
-							<div id="Apple button" class="input-group form-group">
-								<div class="input-group-prepend">
-									<button type="button" class="btn btn-secondary">Apple</button>
-								</div>
-					</form>
-				</div>
-				<div class="card-footer">
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-header">
+            <h3>Please select device</h3>
+          </div>
+          <div class="card-body">
+            <form>
+              <div id="Fitbit button" class="input-group form-group">
+                <div class="input-group-prepend">
+                  <a
+                    class="btn btn-success"
+                    href="https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=22DKGW&redirect_uri=https%3A%2F%2Fnolandeluca.github.io%2FWhat-Can-I-Eat%2Fcallback&scope=activity%20nutrition&expires_in=604800"
+                    role="button"
+                    >Fitbit</a
+                  >
+                </div>
+              </div>
+              <div id="Samsung button" class="input-group form-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-primary">Samsung</button>
+                </div>
+              </div>
+              <div id="Apple button" class="input-group form-group">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-secondary">Apple</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer"></div>
+        </div>
+      </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </body>
 </html>
