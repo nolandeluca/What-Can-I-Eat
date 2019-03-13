@@ -7,238 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="index2.js"></script>
 
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <div class="dropdown">
-        <a id="dLabel" data-target="#" href="javascript:;" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">
-            Refine search by <span>Calories, Diet, Ingredients</span> <b class="caret down"></b>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="dLabel">
-            <div class="col-md-12 filters">
-                <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h4>Calories</h4>
-                        <input type="text" value="" placeholder="From" class="from-to-area" maxlength="4" id="cal-from">
-                        <input type="text" value="" placeholder="To" class="from-to-area" maxlength="4" id="cal-to">
-                        <input type="hidden" value="" name="calories" id="calories-input">
-                    </div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h4>Ingredients</h4>
-                        <input type="text" value="" placeholder="Up to" name="ingr" class="from-to-area" maxlength="4"
-                            id="ing-upto">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Diets</h4>
-                    </div>
-                </div>
-                <div class="row" id="search-filter-diet">
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Vegetarian" value="vegetarian" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Vegetarian">Vegetarian</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Vegan" value="vegan" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Vegan">Vegan</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Paleo" value="paleo" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Paleo">Paleo</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-High-Fiber" value="high-fiber" name="diet"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-High-Fiber">High-Fiber</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-High-Protein" value="high-protein" name="diet"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-High-Protein">High-Protein</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Low-Carb" value="low-carb" name="diet"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Low-Carb">Low-Carb</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Low-Fat" value="low-fat" name="diet"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Low-Fat">Low-Fat</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Low-Sodium" value="low-sodium" name="diet"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Low-Sodium">Low-Sodium</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Low-Sugar" value="sugar-conscious" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Low-Sugar">Low-Sugar</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Alcohol-Free" value="alcohol-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Alcohol-Free">Alcohol-Free</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Balanced" value="balanced" name="diet"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Balanced">Balanced</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4>Allergies</h4>
-                    </div>
-                </div>
-                <div class="row" id="search-filter-allergies">
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Gluten" value="gluten-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Gluten">Gluten</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Dairy" value="dairy-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Dairy">Dairy</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Eggs" value="egg-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Eggs">Eggs</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Soy" value="soy-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Soy">Soy</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Wheat" value="wheat-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Wheat">Wheat</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Fish" value="fish-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Fish">Fish</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Shellfish" value="shellfish-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Shellfish">Shellfish</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Tree Nuts" value="tree-nut-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Tree Nuts">Tree Nuts</label>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-xs-6">
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="calories-Peanuts" value="peanut-free" name="health"
-                                    class="pseudo-checkbox sr-only">
-                                <label for="calories-Peanuts">Peanuts</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <span class="clear-selection">Clear Filters</span>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <span id="set-filters" class="more">Done</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script type="text/javascript">
+
+    </script>
+    <h1>
+        sdfsdffsdf
+          <div id="calorie-data"></div>
+        sdfsdfsfsdf
+      </h1>
+    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
