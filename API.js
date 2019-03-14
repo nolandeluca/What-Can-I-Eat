@@ -10,7 +10,7 @@ const config = {
   headers: {
     "Content-Type": "application/json",
     Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkRLR1ciLCJzdWIiOiI1V1RYUTciLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyc29jIHJzZXQgcmFjdCBybG9jIHJ3ZWkgcmhyIHJudXQgcnBybyByc2xlIiwiZXhwIjoxNTUyMzc4NTc3LCJpYXQiOjE1NTIzNDk3Nzd9.Sf7U5fXeMc-QO5F8PLQKy22gC15RwMmYZVIr64Md1e8"
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMkRLR1ciLCJzdWIiOiI1V1RYUTciLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyYWN0IHJudXQiLCJleHAiOjE1NTI2MzA1NzksImlhdCI6MTU1MjYwMTc3OX0.BhspVUGdyvk9XCHHDs1Q1Xa_bOTMm5HmHUVwafrt9kk"
   }
 };
 
