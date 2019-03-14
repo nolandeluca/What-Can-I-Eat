@@ -1,5 +1,9 @@
-import axios from "axios";
-const BASEURL = "https://api.edamam.com/search?q&app_id=d92a48f4&app_key=58924f64c0c56540119df47989fe9528";
+// import axios from "axios";
+require('dotenv').config();
+const BASEURL = "https://api.edamam.com/search?q58924f64c0c56540119df47989fe9528";
+const APPID = "&app_id=" + process.env.REACT_APP_EDAMAM_ID;
+const APIKEY = "&app_key=" + process.env.REACT_APP_EDAMAM_KEY;
+console.log(BASEURL + APPID + APIKEY)
 //const APIKEY = "&apikey=trilogy";
 //const to = "&to=5"
 const calories = "&calories=0-400"
@@ -15,7 +19,7 @@ const config = {
 export default {
   search: function(to,diet) {
    // return axios.get(BASEURL);
-    return axios.get(BASEURL + `&to=${to}` + calories + health + `&diet=${diet}`);
+    return axios.get(BASEURL + APPID + APIKEY + `&to=${to}` + calories + health + `&diet=${diet}`);
   },
 
   fitnessdata: function(query){
